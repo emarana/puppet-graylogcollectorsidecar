@@ -20,7 +20,7 @@ class graylogcollectorsidecar::configure (
     group   => $graylog::elasticsearch_group,
     content => template('graylog/config/collector_sidecar_yml.erb'),
     require => File[ $graylog::config_dir ],
-  } ->
+  }
 
   # yaml_setting {
   #   'sidecar_set_server':
